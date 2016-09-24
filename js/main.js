@@ -22,22 +22,18 @@
         var $container = $('.isotopeWrapper');
         var $resize = $('.isotopeWrapper').attr('id');
         // initialize isotope
-        
-        $container.isotope({
-            itemSelector: '.isotopeItem',
-            resizable: false, // disable normal resizing
-            masonry: {
-                columnWidth: $container.width() / $resize
-            }
+        $(window).load(function(){
+	        $container.isotope({
+	            itemSelector: '.isotopeItem',
+	            resizable: false, // disable normal resizing
+	            masonry: {
+	                columnWidth: $container.width() / $resize
+	            }
+	        });
+		});
 
-
-            
-        });
 
         $('#filter a').click(function(){
-
-
-
             $('#filter a').removeClass('current');
             $(this).addClass('current');
             var selector = $(this).attr('data-filter');
@@ -95,8 +91,8 @@
 	jQuery('.appear').appear();
 	jQuery(".appear").on("appear", function(data) {
 			var id = $(this).attr("id");
-			jQuery('.nav li').removeClass('active');
-			jQuery(".nav a[href='#" + id + "']").parent().addClass("active");					
+			jQuery('.navbar-nav li').removeClass('active');
+			jQuery(".navbar-nav a[href='#" + id + "']").parent().addClass("active");					
 		});
 
 
@@ -128,11 +124,13 @@
 	function initNice() {
 		if($(window).innerWidth() <= 960) {
 			$('html').niceScroll().remove();
+			
 		} else {
 			$("html").niceScroll({zindex:999,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5});
+			
 		}
+		
 	}
 	$(window).load(initNice);
-	$(window).resize(initNice);
-
+	$(window).resize(initNice); 
 })(jQuery);

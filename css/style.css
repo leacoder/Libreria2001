@@ -1,10 +1,10 @@
 /* ==== Google font ==== */
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 /* === fontawesome === */
-@import url('http://googledrive.com/host/0B38QtqepKI25enFpTWlqRS1MZVU/font-awesome.css');
+@import url('font-awesome.css');
 /* ==== overwrite bootstrap standard ==== */
-@import url('http://googledrive.com/host/0B38QtqepKI25N2xEYjRYUHdaQkk');
-@import url('http://googledrive.com/host/0B38QtqepKI25ZmM0RFZja2RXMHM');
+@import url('overwrite.css');
+@import url('animate.css');
 /*==========================================================================
   General
   ========================================================================== */
@@ -332,13 +332,13 @@ section.section {
 ============================= */
 
 #parallax1{	
-	background-image: url(https://googledrive.com/host/0B38QtqepKI25bjVxbWI4VTU1NHc);
+	background-image: url(../img/parallax/img1.jpg);
 }
 #parallax2{	
-	background-image: url(https://googledrive.com/host/0B38QtqepKI25S2gtLTZWWkNZOGs);
+	background-image: url(../img/parallax/contacto.jpg);
 }
 #testimonials{	
-	background-image: url(https://googledrive.com/host/0B38QtqepKI25NUFCLXh1T29yVTQ);
+	background-image: url(../img/parallax/img3.jpg);
 }
 /*===========================
   --- Header & menu ----
@@ -364,6 +364,69 @@ section.section {
 	line-height: 100%;
 	margin-bottom: 0;
 	padding-bottom:0;
+}
+
+.nav-pills {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+#contactonav>li>a {
+	display: table;
+	height: 100%;
+	width: 100%;
+	line-height: 100%;
+	vertical-align: middle;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 26px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+#contactonav>li {
+	background: cadetblue;
+	display: table;
+	height: 100%;
+	width: 48%;	
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	color: #fff;
+	background-color: #1A8189;
+}
+
+.nav>li>a {
+	display: table-cell;
+	height: 100%;
+	line-height: 100%;
+	vertical-align: middle;
+	color: #fff;
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+.nav>li>a:hover {
+	color: #fff;
+	background: none;
+}
+
+.navbar-nav {
+	float: right;
+	margin-bottom: 0;
+	padding-bottom:0;	
+}
+
+.navbar .navbar-nav > .active > a {
+	color: #fff;
+}
+.navbar .navbar-nav > .active > a {
+	padding-bottom: 22px;
 }
 
 .nav>li>a {
@@ -1090,5 +1153,77 @@ Media queries
 
 	#logolib {
 		width: 350px;
+	}
+}
+@media only screen and (min-width : 768px) and (max-device-width : 1023px)  {
+	#logoindex{
+		margin-top: -5%;
+		margin-bottom: -5%;
+		width: 100%;
+	}
+
+	#parallax2 {
+		background-size: cover;
+	}
+
+	#testimonials {
+		background-size: cover;
+	}
+	#parallax1 {
+		background-size: cover;
+	}
+
+	#footer {
+		padding: 40px 0 40px 0;
+	}
+
+}
+
+@media only screen and (min-width : 320px) and (max-device-width : 767px)  {
+
+	#logoindex{
+		margin-top: 20%;
+		margin-bottom: -20%;
+		width: 100%;
+	}
+
+	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
+		margin-left: 9px;
+	}
+
+	#testimonials {
+		background-size: cover;
+	}
+
+	nav#filter li {
+		display: inline-flex;
+	}
+
+	#parallax2 {
+		background-size: cover;
+	}
+
+	.nav-pills > li + li {
+		margin-left: 0px;
+	}
+
+	#contactonav>li {
+		width: 100%;
+	}
+
+	#footer {
+		padding: 30px 0 30px 0;
+	}
+
+	#map {
+		height: 350px;
+	}
+}
+
+@media  (min-device-width : 1024px)  {
+	#logoindex{
+		margin-top: -25%;
+		margin-bottom: -20%;
+		width: 91%;
 	}
 }
