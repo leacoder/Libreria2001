@@ -1,65 +1,74 @@
 (function ($) {
 
-	$(window).scroll(function(){
+	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
 			$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-		});
-		$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 1000);
-				return false;
-		});
-	
+		} else {
+			$('.scrollup').fadeOut();
+		}
+	});
+	$('.scrollup').click(function () {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 1000);
+		return false;
+	});
+
 	// local scroll
-	jQuery('.navbar').localScroll({hash:true, offset: {top: 0},duration: 800, easing:'easeInOutExpo'});
+	jQuery('.navbar').localScroll({
+		hash: true,
+		offset: {
+			top: 0
+		},
+		duration: 800,
+		easing: 'easeInOutExpo'
+	});
 
-	
+
 	// portfolio
-    if($('.isotopeWrapper').length){
+	if ($('.isotopeWrapper').length) {
 
-        var $container = $('.isotopeWrapper');
-        var $resize = $('.isotopeWrapper').attr('id');
-        // initialize isotope
-        $(window).load(function(){
-	        $container.isotope({
-	            itemSelector: '.isotopeItem',
-	            resizable: false, // disable normal resizing
-	            masonry: {
-	                columnWidth: $container.width() / $resize
-	            }
-	        });
+		var $container = $('.isotopeWrapper');
+		var $resize = $('.isotopeWrapper').attr('id');
+		// initialize isotope
+		$(window).load(function () {
+			$container.isotope({
+				itemSelector: '.isotopeItem',
+				resizable: false, // disable normal resizing
+				masonry: {
+					columnWidth: $container.width() / $resize
+				}
+			});
 		});
 
 
-        $('#filter a').click(function(){
-            $('#filter a').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 1000,
-                    easing: 'easeOutQuart',
-                    queue: false
-                }
-            });
-            return false;
-        });
-        
-        
-        $(window).smartresize(function(){
-            $container.isotope({
-                // update columnWidth to a percentage of container width
-                masonry: {
-                    columnWidth: $container.width() / $resize
-                }
-            });
-        });
-        
+		$('#filter a').click(function () {
+			$('#filter a').removeClass('current');
+			$(this).addClass('current');
+			var selector = $(this).attr('data-filter');
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 1000,
+					easing: 'easeOutQuart',
+					queue: false
+				}
+			});
+			return false;
+		});
 
-}  
+
+		$(window).smartresize(function () {
+			$container.isotope({
+				// update columnWidth to a percentage of container width
+				masonry: {
+					columnWidth: $container.width() / $resize
+				}
+			});
+		});
+
+
+	}
 
 
 	// fancybox
@@ -67,8 +76,8 @@
 
 
 	if (Modernizr.mq("screen and (max-width:1024px)")) {
-			jQuery("body").toggleClass("body");
-			
+		jQuery("body").toggleClass("body");
+
 	} else {
 		var s = skrollr.init({
 			mobileDeceleration: 1,
@@ -76,61 +85,81 @@
 			forceHeight: true,
 			smoothScrolling: true,
 			smoothScrollingDuration: 300,
-				easing: {
-					WTF: Math.random,
-					inverted: function(p) {
-						return 1-p;
-					}
+			easing: {
+				WTF: Math.random,
+				inverted: function (p) {
+					return 1 - p;
 				}
-			});	
+			}
+		});
 	}
 
 
 
 	//scroll menu
+
 	jQuery('.appear').appear();
-	jQuery(".appear").on("appear", function(data) {
-			var id = $(this).attr("id");
-			jQuery('.navbar-nav li').removeClass('active');
-			jQuery(".navbar-nav a[href='#" + id + "']").parent().addClass("active");					
+	jQuery(".appear").on("appear", function (data) {
+		var id = $(this).attr("id");
+		jQuery('.navbar-nav li').removeClass('active');
+		jQuery(".navbar-nav a[href='#" + id + "']").parent().addClass("active");
+	});
+	
+	$(".navbar-nav li a").click(function () {
+		var id = $(this)["0"].attributes.href.nodeValue;
+		console.log($(this)["0"].attributes.href.nodeValue);
+		$('html, body').animate({
+			scrollTop: $(id).offset().top
+		}, 1000);
+	});
+	
+	//parallax
+	var isMobile = false;
+
+	if (Modernizr.mq('only all and (max-width: 1024px)')) {
+		isMobile = true;
+	}
+
+
+	if (isMobile == false && ($('#parallax1').length || isMobile == false && $('#parallax2').length || isMobile == false && $('#testimonials').length)) {
+
+
+		$(window).stellar({
+			responsive: true,
+			scrollProperty: 'scroll',
+			parallaxElements: false,
+			horizontalScrolling: false,
+			horizontalOffset: 0,
+			verticalOffset: 0
 		});
 
+	}
 
-		//parallax
-        var isMobile = false;
-
-        if(Modernizr.mq('only all and (max-width: 1024px)') ) {
-            isMobile = true;
-        }
-
-        
-        if (isMobile == false && ($('#parallax1').length  ||isMobile == false &&  $('#parallax2').length ||isMobile == false &&  $('#testimonials').length))
-        {
-
-
-            $(window).stellar({
-                responsive:true,
-                scrollProperty: 'scroll',
-                parallaxElements: false,
-                horizontalScrolling: false,
-                horizontalOffset: 0,
-                verticalOffset: 0
-            });
-
-        }
-	
 	//nicescroll
-	$("html").niceScroll({zindex:999,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5});
+	$("html").niceScroll({
+		zindex: 999,
+		cursorborder: "",
+		cursorborderradius: "2px",
+		cursorcolor: "#191919",
+		cursoropacitymin: .5
+	});
+
 	function initNice() {
-		if($(window).innerWidth() <= 960) {
+		if ($(window).innerWidth() <= 960) {
 			$('html').niceScroll().remove();
-			
+
 		} else {
-			$("html").niceScroll({zindex:999,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5});
-			
+			$("html").niceScroll({
+				zindex: 999,
+				cursorborder: "",
+				cursorborderradius: "2px",
+				cursorcolor: "#191919",
+				cursoropacitymin: .5
+			});
+
 		}
-		
+
 	}
 	$(window).load(initNice);
-	$(window).resize(initNice); 
+	$(window).resize(initNice);
 })(jQuery);
