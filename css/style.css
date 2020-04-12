@@ -162,6 +162,25 @@ a:hover {
 .align-center {
 	text-align: center;
 }
+.online{
+	position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	margin-left: 15px;
+}
+a.ecommerce{
+	color: #777777 !important;
+}
+.ecommerce:hover{
+	color: #778fb3 !important;
+}
+.ecommerce:focus{
+	color: #778fb3 !important;
+}
+.ecommerce:hover > .online{
+	color: #778fb3 !important;
+}
 
 /* ---- padding ---- */
 /* top */
@@ -493,7 +512,7 @@ h1 a.navbar-brand {
 =========================== */
 
 section.featured {
-	padding: 200px 0 60px;
+    padding: 160px 0 0px;
 	background: #475D7E;
 	color: #fdfdfd;
 }
