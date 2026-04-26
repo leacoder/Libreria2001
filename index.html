@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
-
+<html lang="es">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Librería 2001 - Papelería, artística y librería comercial en Avellaneda</title>
+	<title>Librería 2001 — Papelería, artística y librería comercial en Avellaneda</title>
 	<meta name="description" content="Librería 2001 en Avellaneda: artículos de oficina, librería artística, libros contables, fotocopias e impresiones a color. Av. Mitre 634, locales 7 y 10.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0c5fa0">
 	<link rel="canonical" href="https://www.libreria2001.com.ar/">
 
-	<!-- Open Graph / redes sociales -->
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Librería 2001 - Papelería en Avellaneda">
+	<meta property="og:title" content="Librería 2001 — Papelería en Avellaneda">
 	<meta property="og:description" content="Artículos de oficina, librería artística, libros contables, fotocopias e impresiones a color. Av. Mitre 634, Avellaneda.">
 	<meta property="og:image" content="https://www.libreria2001.com.ar/img/Libreria%202001/LogoLibreriaBlueFlat.png">
 	<meta property="og:url" content="https://www.libreria2001.com.ar/">
@@ -19,19 +17,14 @@
 	<meta name="twitter:card" content="summary_large_image">
 
 	<link rel="icon" type="image/png" href="favicon.png">
-	<link rel="shortcut icon" type="image/png" href="favicon.png">
 	<link rel="apple-touch-icon" href="favicon.png">
 
-	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen">
-	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
 
-	<!-- skin -->
-	<link rel="stylesheet" href="skin/default.css">
+	<link rel="stylesheet" href="css/main.css">
 
-	<!-- Datos estructurados para Google -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -49,24 +42,10 @@
 			"addressRegion": "Buenos Aires",
 			"addressCountry": "AR"
 		},
-		"geo": {
-			"@type": "GeoCoordinates",
-			"latitude": -34.661290,
-			"longitude": -58.366276
-		},
+		"geo": { "@type": "GeoCoordinates", "latitude": -34.661290, "longitude": -58.366276 },
 		"openingHoursSpecification": [
-			{
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-				"opens": "10:00",
-				"closes": "18:00"
-			},
-			{
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": "Saturday",
-				"opens": "10:00",
-				"closes": "13:00"
-			}
+			{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:00" },
+			{ "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:00" }
 		],
 		"sameAs": [
 			"https://www.facebook.com/pages/Libreria-2001/152006401586229",
@@ -75,632 +54,246 @@
 	}
 	</script>
 </head>
-
 <body>
-	<section id="header" class="appear"></section>
-	<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);"
-	    data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="fa fa-bars color-white"></span>
-				</button>
-				<h1>
-					<a class="navbar-brand" href="#header" data-0="line-height:90px;" data-300="line-height:50px;">Librería 2001
-					</a>
-				</h1>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-					<li class="active">
-						<a href="#header">Inicio</a>
-					</li>
-					<li>
-						<a href="#Section-about">Servicios</a>
-					</li>
-					<li>
-						<a href="#section-works">Productos</a>
-					</li>
-					<li>
-						<a href="#section-contact">Contacto</a>
-					</li>
-				</ul>
-			</div>
-			<!--/.navbar-collapse -->
+
+<header class="site-header" id="top">
+	<div class="container nav-bar">
+		<a href="#top" class="brand" aria-label="Librería 2001 - Inicio">
+			<img src="img/Libreria 2001/LogoLibreriaBlueFlat.png" alt="" width="40" height="40">
+			<span>Librería 2001</span>
+		</a>
+		<button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+			<span></span><span></span><span></span>
+		</button>
+		<nav id="primary-nav" class="primary-nav" aria-label="Principal">
+			<a href="#servicios">Servicios</a>
+			<a href="#productos">Productos</a>
+			<a href="#contacto">Contacto</a>
+			<a href="https://wa.me/5491128995506" class="btn btn-primary" target="_blank" rel="noopener">
+				<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.413c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+				WhatsApp
+			</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+	<div class="container hero-inner">
+		<img src="img/Libreria 2001/LogoLibreriaBlueFlat.png" alt="Logo Librería 2001" class="hero-logo" width="200" height="200">
+		<h1>Bienvenidos</h1>
+		<p class="lead">Tu librería de confianza en Avellaneda — desde 2001</p>
+		<div class="hero-cta">
+			<a href="#productos" class="btn btn-primary">Ver productos</a>
+			<a href="#contacto" class="btn btn-ghost">Cómo llegar</a>
 		</div>
 	</div>
+	<div class="hero-scroll" aria-hidden="true">
+		<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+	</div>
+</section>
 
-	<section class="featured">
-		<div class="container">
-			<div class="row mar-bot40">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="align-center">
-						<div>
-							<img id="logoindex" src="img/Libreria 2001/LogoLibreriaBlueFlat.png" alt="Logo Librería 2001">
-						</div>
-						<h2 class="slogan">Bienvenidos</h2>
-					</div>
+<section class="categories" id="servicios">
+	<div class="container">
+		<div class="cat-grid">
+			<article class="cat-card reveal">
+				<div class="cat-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
 				</div>
+				<h3>Comercial</h3>
+				<p>Artículos de oficina y todo lo que tu empresa necesita.</p>
+			</article>
+			<article class="cat-card reveal">
+				<div class="cat-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+				</div>
+				<h3>Artística</h3>
+				<p>Pinceles, óleos, acrílicos y materiales para arte.</p>
+			</article>
+			<article class="cat-card reveal">
+				<div class="cat-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+				</div>
+				<h3>Libros contables</h3>
+				<p>Copiado directo en el acto, rápido y prolijo.</p>
+			</article>
+			<article class="cat-card reveal">
+				<div class="cat-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+				</div>
+				<h3>Impresiones</h3>
+				<p>Fotocopias e impresiones a color en el momento.</p>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="services" id="services-photos">
+	<div class="container">
+		<header class="section-header reveal">
+			<span class="eyebrow">Lo que hacemos</span>
+			<h2>Nuestros servicios</h2>
+			<p>Una selección de los servicios que ofrecemos.</p>
+		</header>
+		<div class="service-grid">
+			<article class="service-card reveal">
+				<img src="img/service/artistica.jpg" alt="Librería artística con pinceles, óleos y materiales" loading="lazy" width="600" height="400">
+				<div class="service-info">
+					<h3>Librería artística</h3>
+					<p>Materiales de las mejores marcas para profesionales y aficionados.</p>
+				</div>
+			</article>
+			<article class="service-card reveal">
+				<img src="img/service/contable.jpg" alt="Copiado de libros contables en el acto" loading="lazy" width="600" height="400">
+				<div class="service-info">
+					<h3>Copiado de libros contables</h3>
+					<p>En el acto, sin demoras. Llevate tu libro listo el mismo día.</p>
+				</div>
+			</article>
+			<article class="service-card reveal">
+				<img src="img/service/impresiones.jpg" alt="Impresiones a color y fotocopias" loading="lazy" width="600" height="400">
+				<div class="service-info">
+					<h3>Impresiones</h3>
+					<p>A color y blanco y negro, en el momento, con calidad profesional.</p>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="quote-band quote-1" aria-label="Cita destacada">
+	<div class="container">
+		<blockquote>La mejor atención personalizada</blockquote>
+		<cite>— Librería 2001</cite>
+	</div>
+</section>
+
+<section class="portfolio" id="productos">
+	<div class="container">
+		<header class="section-header reveal">
+			<span class="eyebrow">Catálogo</span>
+			<h2>Productos</h2>
+			<p>Una selección de lo que vas a encontrar en nuestro local.</p>
+		</header>
+
+		<div class="filters" role="tablist" aria-label="Filtrar productos">
+			<button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+			<button class="filter" data-filter="artistica" role="tab" aria-selected="false">Artísticos</button>
+			<button class="filter" data-filter="comercial" role="tab" aria-selected="false">Comerciales</button>
+			<button class="filter" data-filter="escolar" role="tab" aria-selected="false">Escolares</button>
+		</div>
+
+		<div class="product-grid" id="product-grid">
+			<button class="product" data-cat="comercial" data-img="img/portfolio/agendarec.jpg" data-title="Agenda comercial"><img src="img/portfolio/agendarec.jpg" alt="Agenda comercial" loading="lazy"><span>Agenda</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/agendarec2.jpg" data-title="Agenda comercial diaria"><img src="img/portfolio/agendarec2.jpg" alt="Agenda comercial diaria" loading="lazy"><span>Agenda</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/ResmaAutor.jpg" data-title="Resma A4 marca Autor"><img src="img/portfolio/ResmaAutor.jpg" alt="Resma A4 marca Autor" loading="lazy"><span>Resma A4</span></button>
+			<button class="product" data-cat="artistica" data-img="img/portfolio/acrilicos.jpg" data-title="Pinturas acrílicas"><img src="img/portfolio/acrilicos.jpg" alt="Pinturas acrílicas" loading="lazy"><span>Acrílicos</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/Cartuchera.jpg" data-title="Cartuchera escolar"><img src="img/portfolio/Cartuchera.jpg" alt="Cartuchera escolar" loading="lazy"><span>Cartuchera</span></button>
+			<button class="product" data-cat="artistica" data-img="img/portfolio/albaoleo.jpg" data-title="Óleos Alba"><img src="img/portfolio/albaoleo.jpg" alt="Óleos Alba" loading="lazy"><span>Óleos</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/biblioratosutil.jpg" data-title="Biblioratos Útil"><img src="img/portfolio/biblioratosutil.jpg" alt="Biblioratos Útil" loading="lazy"><span>Biblioratos</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/canoplasofia.jpg" data-title="Canoplas escolares"><img src="img/portfolio/canoplasofia.jpg" alt="Canoplas escolares" loading="lazy"><span>Canoplas</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/carcanopla.jpg" data-title="Cartuchera canopla"><img src="img/portfolio/carcanopla.jpg" alt="Cartuchera canopla" loading="lazy"><span>Cartuchera</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/carpetaKevin.jpg" data-title="Carpeta escolar diseño Kevin"><img src="img/portfolio/carpetaKevin.jpg" alt="Carpeta escolar diseño Kevin" loading="lazy"><span>Carpeta</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/carpetaKitti.jpg" data-title="Carpeta escolar diseño Hello Kitty"><img src="img/portfolio/carpetaKitti.jpg" alt="Carpeta escolar diseño Hello Kitty" loading="lazy"><span>Carpeta</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/CartuchosHP.jpg" data-title="Cartuchos de tinta HP"><img src="img/portfolio/CartuchosHP.jpg" alt="Cartuchos de tinta HP" loading="lazy"><span>Cartuchos HP</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/epsoncartuchos.jpg" data-title="Cartuchos de tinta Epson"><img src="img/portfolio/epsoncartuchos.jpg" alt="Cartuchos de tinta Epson" loading="lazy"><span>Cartuchos Epson</span></button>
+			<button class="product" data-cat="comercial" data-img="img/portfolio/tonerhp.jpg" data-title="Toner HP para impresoras láser"><img src="img/portfolio/tonerhp.jpg" alt="Toner HP" loading="lazy"><span>Toner</span></button>
+			<button class="product" data-cat="artistica" data-img="img/portfolio/Casanartistica.jpg" data-title="Pinceles Casan"><img src="img/portfolio/Casanartistica.jpg" alt="Pinceles Casan" loading="lazy"><span>Pinceles</span></button>
+			<button class="product" data-cat="artistica" data-img="img/portfolio/cortadoresgomaeva.jpg" data-title="Troqueladores y cortadores de goma eva"><img src="img/portfolio/cortadoresgomaeva.jpg" alt="Troqueladores de goma eva" loading="lazy"><span>Troqueladores</span></button>
+			<button class="product" data-cat="artistica" data-img="img/portfolio/servilletadecoupage.jpg" data-title="Servilletas para decoupage"><img src="img/portfolio/servilletadecoupage.jpg" alt="Servilletas para decoupage" loading="lazy"><span>Decoupage</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/exitorepuesto.jpg" data-title="Hojas Éxito de repuesto"><img src="img/portfolio/exitorepuesto.jpg" alt="Hojas Éxito" loading="lazy"><span>Hojas</span></button>
+			<button class="product" data-cat="escolar" data-img="img/portfolio/rivadavia.jpg" data-title="Repuestos escolares Rivadavia"><img src="img/portfolio/rivadavia.jpg" alt="Repuestos Rivadavia" loading="lazy"><span>Repuestos</span></button>
+		</div>
+	</div>
+</section>
+
+<section class="quote-band quote-2" aria-label="Cita destacada">
+	<div class="container">
+		<blockquote>Acercate a consultar</blockquote>
+		<cite>— Librería 2001</cite>
+	</div>
+</section>
+
+<section class="contact" id="contacto">
+	<div class="container">
+		<header class="section-header reveal">
+			<span class="eyebrow">Visitanos</span>
+			<h2>Contactanos</h2>
+		</header>
+		<div class="contact-grid">
+			<div class="contact-card reveal">
+				<div class="contact-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+				</div>
+				<h3>Dirección</h3>
+				<p>
+					Av. Mitre 634<br>
+					Locales 7 y 10<br>
+					Avellaneda, Buenos Aires
+				</p>
+				<p class="contact-links">
+					<a href="tel:+541147398174">📞 7398-1174</a>
+					<a href="https://wa.me/5491128995506" target="_blank" rel="noopener">💬 11-2899-5506</a>
+				</p>
+			</div>
+			<div class="contact-card reveal">
+				<div class="contact-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+				</div>
+				<h3>Horarios</h3>
+				<p>Lunes a viernes<br><strong>10:00 a 18:00 hs</strong></p>
+				<p>Sábados<br><strong>10:00 a 13:00 hs</strong></p>
+			</div>
+			<div class="contact-card reveal">
+				<div class="contact-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+				</div>
+				<h3>Mail</h3>
+				<p><a href="mailto:libreria2001@hotmail.com">libreria2001@hotmail.com</a></p>
+				<ul class="social">
+					<li><a href="https://www.facebook.com/pages/Libreria-2001/152006401586229" target="_blank" rel="noopener" aria-label="Facebook">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+					</a></li>
+					<li><a href="https://www.instagram.com/libreria2001/" target="_blank" rel="noopener" aria-label="Instagram">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+					</a></li>
+				</ul>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<!-- services -->
-	<section id="section-main" class="section pad-bot30 bg-white">
-		<div class="container">
-			<div class="row mar-bot40">
-				<div class="col-sm-6 col-lg-3">
-					<div class="align-center">
-						<i class="fa fa-briefcase fa-5x mar-bot20"></i>
-						<h4 class="text-bold">Comercial</h4>
-						<p>Artículos de oficina
-						</p>
-					</div>
-				</div>
+<section class="map-wrap" aria-label="Ubicación en el mapa">
+	<iframe
+		title="Mapa de Librería 2001"
+		src="https://www.google.com/maps?q=-34.661290,-58.366276&z=17&output=embed"
+		loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade"
+		allowfullscreen></iframe>
+</section>
 
-				<div class="col-sm-6 col-lg-3">
-					<div class="align-center">
-						<i class="fa fa-pencil fa-5x mar-bot20"></i>
-						<h4 class="text-bold">Artística</h4>
-						<p>Pinceles - óleos - Acrílicos
-						</p>
-					</div>
-				</div>
+</main>
 
-				<div class="col-sm-6 col-lg-3">
-					<div class="align-center">
-						<i class="fa fa-book fa-5x mar-bot20"></i>
-						<h4 class="text-bold">Libros Contables</h4>
-						<p>Copiado directo
-						</p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="align-center">
-						<i class="fa fa-desktop fa-5x mar-bot20"></i>
-						<h4 class="text-bold">Impresiones</h4>
-						<p>Fotocopias - <br>Impresora
-						</p>
-					</div>
-				</div>
+<footer class="site-footer">
+	<div class="container footer-inner">
+		<p>© <span id="year">2026</span> Librería 2001 · Av. Mitre 634, Avellaneda</p>
+		<p>Diseño <a href="http://www.lgdesign.com.ar" target="_blank" rel="noopener">LG Design</a></p>
+	</div>
+</footer>
 
-			</div>
+<a href="https://wa.me/5491128995506" class="wa-float" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+	<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.413c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
 
-		</div>
-	</section>
+<dialog class="lightbox" id="lightbox" aria-label="Vista del producto">
+	<button class="lightbox-close" aria-label="Cerrar">×</button>
+	<figure>
+		<img src="" alt="">
+		<figcaption></figcaption>
+	</figure>
+</dialog>
 
-	<!-- about -->
-	<section id="Section-about" class="section appear clearfix">
-		<div class="container">
-			<div class="row mar-bot40">
-				<div class="col-md-offset-3 col-md-6">
-					<div class="section-header">
-						<h2 class="section-heading animated" data-animation="bounceInUp">Nuestros Servicios</h2>
-						<p>Algunos de nuestros servicios</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row align-center mar-bot40">
-				<div class="col-md-4">
-					<div class="team-member">
-						<figure class="member-photo">
-							<img src="img/service/artistica.jpg" alt="Librería artística - pinceles, óleos y materiales" loading="lazy" />
-						</figure>
-						<div class="team-detail">
-							<h4>Librería Artística</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team-member">
-						<figure class="member-photo">
-							<img src="img/service/contable.jpg" alt="Copiado de libros contables en el acto" loading="lazy" />
-						</figure>
-						<div class="team-detail">
-							<h4>Copiado de libros contables</h4>
-							<span>En el acto</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team-member">
-						<figure class="member-photo">
-							<img src="img/service/impresiones.jpg" alt="Impresiones a color y fotocopias" loading="lazy" />
-						</figure>
-						<div class="team-detail">
-							<h4>Impresiones</h4>
-							<span>En el acto a color</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /about -->
-
-	<!-- spacer section:stats -->
-	<section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
-		<div class="container" style="margin-left: -6%;">
-			<div class="align-center pad-top40 pad-bot40">
-				<blockquote class="bigquote color-white">La mejor atención personalizada</blockquote>
-				<p class="color-white">Librería 2001</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- section works -->
-	<section id="section-works" class="section appear clearfix">
-		<div class="container">
-
-			<div class="row mar-bot40">
-				<div class="col-md-offset-3 col-md-6">
-					<div class="section-header">
-						<h2 class="section-heading animated" data-animation="bounceInUp">Productos</h2>
-						<p>Nuestra galería con una selección de productos</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<nav id="filter" class="col-md-12 text-center">
-					<ul>
-						<li>
-							<a href="#" class="current btn-theme btn-small" data-filter="*">Todos</a>
-						</li>
-						<li>
-							<a href="#" class="btn-theme btn-small" data-filter=".artistica">Artísticos</a>
-						</li>
-						<li>
-							<a href="#" class="btn-theme btn-small" data-filter=".comercial">Comerciales</a>
-						</li>
-						<li>
-							<a href="#" class="btn-theme btn-small" data-filter=".escolar">Escolares</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="col-md-12">
-					<div class="row">
-						<div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/agendarec.jpg" alt="Agenda comercial" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Agenda</h5>
-											<a href="img/portfolio/agendarec.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/agendarec2.jpg" alt="Agenda comercial diaria" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Agenda</h5>
-											<a href="img/portfolio/agendarec2.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/ResmaAutor.jpg" alt="Resma de papel A4 marca Autor" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Resma Autor</h5>
-											<a href="img/portfolio/ResmaAutor.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem artistica">
-								<div class="portfolio-item">
-									<img src="img/portfolio/acrilicos.jpg" alt="Pinturas acrílicas para arte" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Acrilicos</h5>
-											<a href="img/portfolio/acrilicos.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/Cartuchera.jpg" alt="Cartuchera escolar" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Cartuchera</h5>
-											<a href="img/portfolio/Cartuchera.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem artistica">
-								<div class="portfolio-item">
-									<img src="img/portfolio/albaoleo.jpg" alt="Óleos Alba para arte" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Óleos</h5>
-											<a href="img/portfolio/albaoleo.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/biblioratosutil.jpg" alt="Biblioratos Útil" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>biblioratos</h5>
-											<a href="img/portfolio/biblioratosutil.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/canoplasofia.jpg" alt="Canoplas escolares con accesorios" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Cartucheras</h5>
-											<a href="img/portfolio/canoplasofia.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/carcanopla.jpg" alt="Cartucheras canopla" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Cartucheras</h5>
-											<a href="img/portfolio/carcanopla.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/carpetaKevin.jpg" alt="Carpeta escolar diseño Kevin" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Carpetas</h5>
-											<a href="img/portfolio/carpetaKevin.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/carpetaKitti.jpg" alt="Carpeta escolar diseño Hello Kitty" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Carpetas</h5>
-											<a href="img/portfolio/carpetaKitti.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/CartuchosHP.jpg" alt="Cartuchos de tinta HP" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Cartuchos</h5>
-											<a href="img/portfolio/CartuchosHP.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/epsoncartuchos.jpg" alt="Cartuchos de tinta Epson" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Cartuchos</h5>
-											<a href="img/portfolio/epsoncartuchos.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem comercial">
-								<div class="portfolio-item">
-									<img src="img/portfolio/tonerhp.jpg" alt="Toner HP para impresoras láser" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Toner</h5>
-											<a href="img/portfolio/tonerhp.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem artistica">
-								<div class="portfolio-item">
-									<img src="img/portfolio/Casanartistica.jpg" alt="Pinceles Casan para arte" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Pinceles</h5>
-											<a href="img/portfolio/Casanartistica.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem artistica">
-								<div class="portfolio-item">
-									<img src="img/portfolio/cortadoresgomaeva.jpg" alt="Troqueladores y cortadores de goma eva" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Troqueladores</h5>
-											<a href="img/portfolio/cortadoresgomaeva.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/exitorepuesto.jpg" alt="Hojas Éxito de repuesto" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Hojas</h5>
-											<a href="img/portfolio/exitorepuesto.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-
-							<article class="col-md-4 isotopeItem escolar">
-								<div class="portfolio-item">
-									<img src="img/portfolio/rivadavia.jpg" alt="Repuestos escolares Rivadavia" loading="lazy" />
-									<div class="portfolio-desc align-center">
-										<div class="folio-info">
-											<h5>Repuestos</h5>
-											<a href="img/portfolio/rivadavia.jpg" class="fancybox">
-												<i class="fa fa-plus fa-2x"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-	<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.5">
-		<div class="align-center pad-top40 pad-bot40">
-			<blockquote class="bigquote color-white">Acercate a consultar</blockquote>
-			<p class="color-white">Librería 2001</p>
-		</div>
-	</section>
-
-	<!-- contact -->
-	<section id="section-contact" class="section appear clearfix">
-		<div class="container">
-					<div class="row mar-top40">
-						<div class="col-lg-12">
-							<div class="section-header">
-								<h2 class="section-heading animated pad-bot40" data-animation="bounceInUp">Contactanos</h2>
-							</div>
-							<div class="row">
-								<div class="col-lg-3">
-									<div class="align-center">
-										<i class="fa fa-map-marker fa-4x mar-bot20"></i>
-										<h2 class="section-heading animated" data-animation="bounceInUp">Dirección</h2>
-										<p>
-											Av. Mitre 634<br>
-											Locales 7 y 10<br>
-											Avellaneda<br>
-											<a href="tel:+541147398-1174">7398-1174</a><br>
-											<a href="https://wa.me/5491128995506" target="_blank" rel="noopener">11-2899-5506 (WhatsApp)</a>
-										</p>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="align-center">
-										<i class="fa fa-clock-o fa-4x mar-bot20"></i>
-										<h2 class="section-heading animated" data-animation="bounceInUp">Horarios</h2>
-										<div class="row">
-											<p>Lunes a viernes<br> 10 a 18 hs.</p>
-											<p>Sábados<br> 10 a 13 hs.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="align-center">
-										<i class="fa fa-envelope fa-4x mar-bot20"></i>
-										<h2 class="section-heading animated" data-animation="bounceInUp">Mail</h2>
-										<p><a href="mailto:libreria2001@hotmail.com">libreria2001@hotmail.com</a></p>
-										<div class="col-sm-12 align-center">
-											<ul class="social-network social-circle">
-												<li>
-													<a href="https://www.facebook.com/pages/Libreria-2001/152006401586229?fref=ts" target="_blank" class="icoFacebook"
-													    title="Facebook">
-														<i class="fa fa-facebook"></i>
-													</a>
-												</li>
-												<li>
-													<a href="https://www.instagram.com/libreria2001/" target="_blank" class="icoInstagram"
-													    title="Instagram">
-														<i class="fa fa-instagram"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>			
-			</div>
-	</section>
-	<!-- map -->
-	<section id="section-map" class="clearfix">
-		<div id="map"></div>
-	</section>
-
-	<section id="footer" class="section footer">
-		<div class="container">
-			<div class="row align-center copyright">
-				<div class="col-sm-12">
-					<p>Página diseñada por
-						<a style="font-weight: bold;" target="_blank" rel="noopener" href="http://www.lgdesign.com.ar">LG Design</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<a href="#header" class="scrollup">
-		<i class="fa fa-chevron-up"></i>
-	</a>
-
-
-	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/whatsapp-button-standalone.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaj014PcnWXAfstyc6ebdaYrfTahnm2pE"></script>
-	<script src="js/jquery.isotope.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="js/skrollr.min.js"></script>
-	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
-	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/jquery.appear.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/validate.js"></script>
-	
-	<script src="js/pill.js"></script>
-	<!-- <script>
-		(FUNCTION(I,S,O,G,R,A,M){I['GOOGLEANALYTICSOBJECT']=R;I[R]=I[R]||FUNCTION(){
-		  (I[R].Q=I[R].Q||[]).PUSH(ARGUMENTS)},I[R].L=1*NEW DATE();A=S.CREATEELEMENT(O),
-		   M=S.GETELEMENTSBYTAGNAME(O)[0];A.ASYNC=1;A.SRC=G;M.PARENTNODE.INSERTBEFORE(A,M)
-		   })(WINDOW,DOCUMENT,'SCRIPT','//WWW.GOOGLE-ANALYTICS.COM/ANALYTICS.JS','GA');
-
-		  GA('CREATE', 'UA-54839348-1', 'AUTO');
-	   GA('SEND', 'PAGEVIEW');
-	</script> -->
-	<script type="text/javascript">
-		// When the window has finished loading create our google map below
-		google.maps.event.addDomListener(window, 'load', init);
-
-		function init() {
-			// Basic options for a simple Google Map
-			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-			var myLatlng = new google.maps.LatLng(-34.661290, -58.366276);
-			var mapOptions = {
-				// How zoomed in you want the map to start at (always required)
-				zoom: 17,
-				scrollwheel: false,
-
-				// The latitude and longitude to center the map (always required)
-				center: new google.maps.LatLng(-34.661290, -58.366276),
-
-
-
-				// How you would like to style the map. 
-				// This is where you would paste any style found on Snazzy Maps.
-				styles: [{
-					featureType: "all",
-					elementType: "all",
-					stylers: [{
-						invert_lightness: false
-					}, {
-						saturation: 10
-					}, {
-						lightness: 30
-					}, {
-						zoomControl: false
-					}, {
-						gamma: 0.5
-					}, {
-						hue: "#1C705B"
-					}]
-				}]
-			};
-
-			// Get the HTML DOM element that will contain your map 
-			// We are using a div with id="map" seen below in the <body>
-			var mapElement = document.getElementById('map');
-
-			// Create the Google Map using out element and options defined above
-			var map = new google.maps.Map(mapElement, mapOptions);
-			var marker = new google.maps.Marker({
-				position: myLatlng,
-				map: map,
-				title: "Libreria 2001"
-			});
-		}
-	</script>
- 
-<!-- <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-55364745-1', 'auto');
-		  ga('send', 'pageview');
-	</script>
-  -->
+<script src="js/app.js" defer></script>
 </body>
-
 </html>
