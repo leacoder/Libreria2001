@@ -201,9 +201,6 @@
   .floating-contact:hover { background:#1d554c; }
   .contact-button-copy { display:grid; gap:4px; text-align:left; }
   .contact-button-copy strong { font-size:1.125rem; letter-spacing:.02em; white-space:nowrap; }
-  .nav-contact .contact-button-copy strong { font-size:1rem; }
-  .floating-contact>span { display:grid; line-height:1.4; }
-  .floating-contact strong { font-size:1rem; letter-spacing:.02em; white-space:nowrap; }
   .breadcrumbs { display:flex; gap:12px; flex-wrap:wrap; font-size:0.875rem; color:var(--muted); margin-bottom:48px; }
   .breadcrumbs a { text-decoration:underline; text-underline-offset:4px; }
   .service-hero { padding:34px 0 80px; }
@@ -385,7 +382,7 @@
     .footer-bottom { flex-wrap:wrap; gap:13px; font-size:0.875rem; padding-bottom:91px; }
     .footer-bottom>span:nth-child(2) { display:none; }
     .floating-contact { bottom:17px; right:17px; padding:14px; }
-    .floating-contact>span { display:grid; }
+    .floating-contact>span { display:none; }
     .service-hero { padding-top:25px; padding-bottom:48px; }
     .breadcrumbs { font-size:0.875rem; margin-bottom:30px; }
     .service-hero-grid { grid-template-columns:1fr; gap:35px; }
@@ -434,7 +431,6 @@
     .quick-info-grid>div { border:0; }
     .quick-info-grid>div:nth-child(2) { padding-left:0; }
     .quick-info small { max-width:none; }
-    .floating-contact { padding:10px 16px; }
     .gallery-toolbar .filters { gap:8px; }
     .filter { padding-inline:13px; }
   }
