@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import { business, whatsappUrl } from '../data/business';
+const home = Astro.url.pathname === '/';
+const anchor = (hash: string) => home ? hash : `/${hash}`;
+---
+<div class="announcement"><div class="container announcement__inner"><span>En Avellaneda, desde 1992.</span><a href={business.maps} target="_blank" rel="noopener noreferrer" data-contact="directions" data-location="topbar">Av. Mitre 634 · Locales 7 y 10 <Icon name="diagonal" size={13} /></a></div></div>
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href={anchor('#header')} aria-label="Librería 2001, inicio">
+      <span class="brand-image"><img src="/img/Libreria%202001/logolibreriaChico.png" width="398" height="291" alt="" /></span>
+      <span class="brand-type">Librería <strong>2001</strong><small>AVELLANEDA · DESDE 1992</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="true" aria-label="Abrir menú" data-menu-toggle hidden><span></span><span></span></button>
+    <nav id="site-navigation" class="site-navigation" aria-label="Navegación principal">
+      <a href={anchor('#Section-about')}>Servicios</a>
+      <a href={anchor('#section-works')}>Productos</a>
+      <a href={anchor('#historia')}>Desde 1992</a>
+      <a href={anchor('#section-contact')}>Contacto</a>
+      <a class="nav-contact" href={whatsappUrl()} target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location="navigation"><Icon name="chat" size={18} /> Hablemos</a>
+    </nav>
+  </div>
+</header>
