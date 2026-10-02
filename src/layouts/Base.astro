@@ -17,7 +17,8 @@ const jsonLd = { '@context':'https://schema.org','@graph':[
   {'@type':'WebPage','@id':`${canonical}#webpage`,url:canonical,name:title,description,inLanguage:'es-AR',isPartOf:{'@id':`${business.site}/#website`},about:{'@id':storeSchema['@id']}},
   ...schema,
 ]};
-const analyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || '';
+const configuredAnalyticsId = (import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || 'G-VDGRQ1QPV9').trim();
+const analyticsId = configuredAnalyticsId === 'off' ? '' : configuredAnalyticsId;
 if (analyticsId && !/^G-[A-Z0-9]+$/.test(analyticsId)) throw new Error('PUBLIC_GOOGLE_ANALYTICS_ID debe ser un ID de medición GA4 válido (G-…).');
 const enableAnalytics = import.meta.env.PROD && analyticsId && !noindex;
 ---
@@ -47,7 +48,7 @@ const enableAnalytics = import.meta.env.PROD && analyticsId && !noindex;
     <meta property="og:image:alt" content="Papelería y materiales de artística. Librería 2001, Avellaneda." />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g,'\\u003c')} />
-    {enableAnalytics && <script is:inline define:vars={{analyticsId}}>
+    {enableAnalytics && <script is:inline data-analytics={analyticsId} define:vars={{analyticsId}}>
       // Local previews must never enter production reports.
       if (location.hostname === 'libreria2001.com.ar' || location.hostname === 'www.libreria2001.com.ar') {
         window.dataLayer = window.dataLayer || [];

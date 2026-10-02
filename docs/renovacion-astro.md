@@ -24,7 +24,7 @@ Las búsquedas locales de la exportación de Search Console respaldan mantener l
 | Falta de foco y operación por teclado | Foco visible, enlace al contenido, controles con nombre y visor `dialog` |
 | Maps en la carga inicial | Indicaciones accesibles y botón para cargar el mapa |
 | Portada genérica y servicios breves | Presentación desde 1992 y cuatro páginas con información propia |
-| Analytics ausente | Integración GA4 preparada, pendiente del ID y validación en producción |
+| Analytics ausente | Integración GA4 configurada con `G-VDGRQ1QPV9`, pendiente de validación en producción |
 
 ## Verificaciones
 
@@ -41,7 +41,7 @@ La portada genera variantes WebP de aproximadamente 29 a 199 KB según resoluci�
 
 ## Pendiente externo
 
-Publicación a cargo del propietario, ID de GA4 y comprobación de eventos, Perfil de Empresa, indexación posterior y fotografías actuales del local/equipo. Las fotos originales del catálogo se conservan como referencia con consulta de disponibilidad. La indexación y las posiciones de Google no pueden garantizarse desde un cambio de código.
+Publicación a cargo del propietario, comprobación de eventos de GA4 en producción, Perfil de Empresa, indexación posterior y fotografías actuales del local/equipo. Las fotos originales del catálogo se conservan como referencia con consulta de disponibilidad. La indexación y las posiciones de Google no pueden garantizarse desde un cambio de código.
 
 ## Imagen editorial
 

@@ -50,9 +50,9 @@ La auditoría original está en [docs/auditoria-2026-10-02.md](docs/auditoria-20
 
 ## Google Analytics 4
 
-La web funciona sin Analytics. Para activarlo, obtener el **ID de medición `G-…`** en Google Analytics → Administrar → Recogida y modificación de datos → Flujos de datos → flujo Web. [Ayuda de Google](https://support.google.com/analytics/answer/14183469?hl=es).
+El ID de medición **`G-VDGRQ1QPV9`** ya está configurado por defecto en `src/layouts/Base.astro`. Está versionado para que tanto la compilación local como el workflow manual lo incluyan, sin configurar variables adicionales. Es un identificador público, no una contraseña.
 
-Copiar `.env.example` a `.env`, completar `PUBLIC_GOOGLE_ANALYTICS_ID` y volver a compilar. En GitHub Actions, crear una **variable del repositorio** con ese mismo nombre en Settings → Secrets and variables → Actions → Variables. Es un identificador público, no una contraseña.
+Para reemplazarlo, copiar `.env.example` a `.env`, completar `PUBLIC_GOOGLE_ANALYTICS_ID` y volver a compilar. En GitHub Actions también se puede usar una **variable del repositorio** con ese nombre en Settings → Secrets and variables → Actions → Variables. El valor `off` desactiva Analytics; un valor vacío conserva el ID predeterminado. El ID se consulta en Google Analytics → Administrar → Recogida y modificación de datos → Flujos de datos → flujo Web. [Ayuda de Google](https://support.google.com/analytics/answer/14183469?hl=es).
 
 Solo se carga en el dominio de producción y con un ID configurado. Las vistas previas locales no envían eventos. Los eventos propios son:
 
@@ -76,7 +76,7 @@ El workflow `.github/workflows/deploy.yml` es **exclusivamente manual**. No tien
 1. Revisar y aprobar la rama. Para disponer del botón manual en Actions, el workflow debe existir en la rama predeterminada del repositorio.
 2. Coordinar la integración de la rama con el cambio de **Settings → Pages → Source → GitHub Actions**. El método anterior de publicar HTML directamente desde la raíz no sirve para estos archivos fuente Astro; no integrar y dejar Pages apuntando a esa raíz.
 3. Conservar el dominio personalizado `libreria2001.com.ar` y HTTPS. `public/CNAME` ya incluye ese dominio. La configuración está preparada para su raíz, sin prefijo `/Libreria2001/`.
-4. Si ya tenés GA4, agregar la variable indicada arriba antes de compilar.
+4. GA4 ya incluye `G-VDGRQ1QPV9`. Usar la variable indicada arriba solamente para reemplazarlo o desactivarlo.
 5. Ir a **Actions → Publicar web (manual) → Run workflow**, elegir la rama aprobada y ejecutarlo.
 6. Comprobar portada, las cuatro páginas de servicio, imágenes, WhatsApp, teléfono, indicaciones, sitemap y una ruta inexistente. Debe servirse `404.html` con estado HTTP 404.
 
