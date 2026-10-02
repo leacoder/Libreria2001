@@ -17,7 +17,7 @@ const anchor = (hash: string) => home ? hash : `/${hash}`;
       <a href={anchor('#section-works')}>Productos</a>
       <a href={anchor('#historia')}>Desde 1992</a>
       <a href={anchor('#section-contact')}>Contacto</a>
-      <a class="nav-contact" href={whatsappUrl()} target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location="navigation"><Icon name="chat" size={18} /> Hablemos</a>
+      <a class="nav-contact" href={whatsappUrl()} target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location="navigation"><Icon name="chat" size={22} /><span class="contact-button-copy"><span>WhatsApp</span><strong>{business.whatsappDisplay}</strong></span></a>
     </nav>
   </div>
 </header>

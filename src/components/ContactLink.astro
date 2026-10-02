@@ -1,9 +1,9 @@
 ---
-import { whatsappUrl } from '../data/business';
+import { business, whatsappUrl } from '../data/business';
 import Icon from './Icon.astro';
 interface Props { label?: string; message?: string; location: string; variant?: string; }
 const { label = 'Consultar por WhatsApp', message, location, variant = 'primary' } = Astro.props;
 ---
 <a class:list={['button', `button--${variant}`]} href={whatsappUrl(message)} target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location={location}>
-  <Icon name="chat" size={20} /><span>{label}</span><Icon name="diagonal" size={16} />
+  <Icon name="chat" size={24} /><span class="contact-button-copy"><span>{label}</span><strong>{business.whatsappDisplay}</strong></span><Icon name="diagonal" size={18} />
 </a>
