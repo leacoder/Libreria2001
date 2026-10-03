@@ -71,16 +71,16 @@ La renovación se preparó en `codex/renovacion-astro-seo`. El deploy queda a ca
 
 ### GitHub Pages
 
-El workflow `.github/workflows/deploy.yml` publica **automáticamente después de cada push o merge a `main`**. Instala, ejecuta `npm run verify` y publica `dist/` únicamente si las comprobaciones pasan. También permite ejecutarlo manualmente desde Actions. Los pushes a otras ramas y los pull requests no disparan publicaciones.
+El workflow `.github/workflows/deploy.yml` publica **automáticamente después de cada push o merge a `master`**. Instala, ejecuta `npm run verify` y publica `dist/` únicamente si las comprobaciones pasan. También permite ejecutarlo manualmente desde Actions. También admite `main` si se renombra la rama principal. Los pushes a ramas de trabajo y los pull requests no disparan publicaciones.
 
 1. Una sola vez, cambiar **Settings → Pages → Build and deployment → Source → GitHub Actions**. Usar el workflow de este repositorio; no agregar una plantilla Jekyll. El error «Invalid YAML front matter» en un archivo `.astro` indica que sigue ejecutándose el constructor Jekyll anterior.
-2. Revisar e integrar la rama en `main`, incluyendo `.github/workflows/deploy.yml`. Ese push o merge inicia la publicación y los siguientes cambios en `main` también la iniciarán automáticamente.
+2. Revisar e integrar la rama en `master`, incluyendo `.github/workflows/deploy.yml`. Ese push o merge inicia la publicación y los siguientes cambios en `master` también la iniciarán automáticamente.
 3. Conservar el dominio personalizado `libreria2001.com.ar` y HTTPS. `public/CNAME` ya incluye ese dominio. La configuración está preparada para su raíz, sin prefijo `/Libreria2001/`.
 4. GA4 ya incluye `G-VDGRQ1QPV9`. Usar la variable indicada arriba solamente para reemplazarlo o desactivarlo.
-5. Seguir el progreso en **Actions → Publicar web**. Para volver a publicar sin nuevos cambios, usar **Run workflow** y elegir `main`. No reejecutar la tarea fallida de Jekyll: conserva la configuración anterior.
+5. Seguir el progreso en **Actions → Publicar web**. Para volver a publicar sin nuevos cambios, usar **Run workflow** y elegir `master`. No reejecutar la tarea fallida de Jekyll: conserva la configuración anterior.
 6. Comprobar portada, las cuatro páginas de servicio, imágenes, WhatsApp, teléfono, indicaciones, sitemap y una ruta inexistente. Debe servirse `404.html` con estado HTTP 404.
 
-El workflow sigue la [guía oficial de Astro para GitHub Pages](https://docs.astro.build/en/guides/deploy/github/), con publicación automática desde `main`, ejecución manual opcional y comprobaciones previas. El cambio de origen de Pages se realiza en GitHub, no desde este archivo. No se ejecutó un despliegue remoto durante esta renovación.
+El workflow sigue la [guía oficial de Astro para GitHub Pages](https://docs.astro.build/en/guides/deploy/github/), con publicación automática desde `master`, ejecución manual opcional y comprobaciones previas. El cambio de origen de Pages se realiza en GitHub, no desde este archivo. No se ejecutó un despliegue remoto durante esta renovación.
 
 ### Otro hosting estático
 
