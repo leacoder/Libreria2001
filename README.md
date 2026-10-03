@@ -50,7 +50,7 @@ La auditoría original está en [docs/auditoria-2026-10-02.md](docs/auditoria-20
 
 ## Google Analytics 4
 
-El ID de medición **`G-VDGRQ1QPV9`** ya está configurado por defecto en `src/layouts/Base.astro`. Está versionado para que tanto la compilación local como el workflow manual lo incluyan, sin configurar variables adicionales. Es un identificador público, no una contraseña.
+El ID de medición **`G-VDGRQ1QPV9`** ya está configurado por defecto en `src/layouts/Base.astro`. Está versionado para que tanto la compilación local como el workflow de publicación lo incluyan, sin configurar variables adicionales. Es un identificador público, no una contraseña.
 
 Para reemplazarlo, copiar `.env.example` a `.env`, completar `PUBLIC_GOOGLE_ANALYTICS_ID` y volver a compilar. En GitHub Actions también se puede usar una **variable del repositorio** con ese nombre en Settings → Secrets and variables → Actions → Variables. El valor `off` desactiva Analytics; un valor vacío conserva el ID predeterminado. El ID se consulta en Google Analytics → Administrar → Recogida y modificación de datos → Flujos de datos → flujo Web. [Ayuda de Google](https://support.google.com/analytics/answer/14183469?hl=es).
 
@@ -71,16 +71,16 @@ La renovación se preparó en `codex/renovacion-astro-seo`. El deploy queda a ca
 
 ### GitHub Pages
 
-El workflow `.github/workflows/deploy.yml` es **exclusivamente manual**. No tiene disparadores por push ni por pull request. Instala, ejecuta `npm run verify` y publica `dist/` solo cuando se ejecuta desde Actions.
+El workflow `.github/workflows/deploy.yml` publica **automáticamente después de cada push o merge a `main`**. Instala, ejecuta `npm run verify` y publica `dist/` únicamente si las comprobaciones pasan. También permite ejecutarlo manualmente desde Actions. Los pushes a otras ramas y los pull requests no disparan publicaciones.
 
-1. Revisar y aprobar la rama. Para disponer del botón manual en Actions, el workflow debe existir en la rama predeterminada del repositorio.
-2. Coordinar la integración de la rama con el cambio de **Settings → Pages → Source → GitHub Actions**. El método anterior de publicar HTML directamente desde la raíz no sirve para estos archivos fuente Astro; no integrar y dejar Pages apuntando a esa raíz.
+1. Una sola vez, cambiar **Settings → Pages → Build and deployment → Source → GitHub Actions**. Usar el workflow de este repositorio; no agregar una plantilla Jekyll. El error «Invalid YAML front matter» en un archivo `.astro` indica que sigue ejecutándose el constructor Jekyll anterior.
+2. Revisar e integrar la rama en `main`, incluyendo `.github/workflows/deploy.yml`. Ese push o merge inicia la publicación y los siguientes cambios en `main` también la iniciarán automáticamente.
 3. Conservar el dominio personalizado `libreria2001.com.ar` y HTTPS. `public/CNAME` ya incluye ese dominio. La configuración está preparada para su raíz, sin prefijo `/Libreria2001/`.
 4. GA4 ya incluye `G-VDGRQ1QPV9`. Usar la variable indicada arriba solamente para reemplazarlo o desactivarlo.
-5. Ir a **Actions → Publicar web (manual) → Run workflow**, elegir la rama aprobada y ejecutarlo.
+5. Seguir el progreso en **Actions → Publicar web**. Para volver a publicar sin nuevos cambios, usar **Run workflow** y elegir `main`. No reejecutar la tarea fallida de Jekyll: conserva la configuración anterior.
 6. Comprobar portada, las cuatro páginas de servicio, imágenes, WhatsApp, teléfono, indicaciones, sitemap y una ruta inexistente. Debe servirse `404.html` con estado HTTP 404.
 
-El workflow sigue la [guía oficial de Astro para GitHub Pages](https://docs.astro.build/en/guides/deploy/github/), con ejecución manual y comprobaciones previas. No se ejecutó un despliegue remoto durante esta renovación.
+El workflow sigue la [guía oficial de Astro para GitHub Pages](https://docs.astro.build/en/guides/deploy/github/), con publicación automática desde `main`, ejecución manual opcional y comprobaciones previas. El cambio de origen de Pages se realiza en GitHub, no desde este archivo. No se ejecutó un despliegue remoto durante esta renovación.
 
 ### Otro hosting estático
 
