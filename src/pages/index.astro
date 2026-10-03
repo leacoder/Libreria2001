@@ -13,7 +13,13 @@ import { services,servicePath } from '../data/services';
   <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-grid">
       <div class="hero-copy"><span class="eyebrow"><span class="little-line"></span> PAPELERÍA · ARTÍSTICA · ESCOLAR</span><h1 id="hero-title">Tu librería<br />en Avellaneda.<br /><em>Desde 1992.</em></h1><p>Para estudiar, trabajar y darle forma a tus ideas.<br class="desktop-break" /> Encontrá lo que necesitás, con la atención de siempre.</p><div class="hero-actions"><ContactLink location="hero" /><a class="hero-secondary" href="#Section-about">Conocé nuestros servicios <Icon name="arrow" size={18} /></a></div><div class="hero-note"><Icon name="pin" size={18} /><span>Av. Mitre 634 · Locales 7 y 10</span></div></div>
-      <div class="hero-visual"><div class="hero-photo"><Image src={editorial} alt="Cuaderno con el logo de Librería 2001 y la frase Tus ideas empiezan acá, desde 1992" widths={[480,720,1000,1440]} sizes="(max-width: 900px) 100vw, 52vw" width={1000} height={1000} fit="cover" format="webp" quality={82} loading="eager" fetchpriority="high" /></div><div class="heritage-seal"><span>DE TODA<br />LA VIDA.</span><span class="seal-star" aria-hidden="true">✳</span><small>DESDE 1992</small></div><div class="photo-caption"><span>Un mundo de posibilidades,</span><em>a la vuelta de casa.</em></div></div>
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <Image src={editorial} alt="Cuaderno con el logo de Librería 2001 y la frase Tus ideas empiezan acá, desde 1992" widths={[480,720,1000,1440]} sizes="(max-width: 650px) 100vw, 52vw" width={1000} height={1000} fit="cover" format="webp" quality={82} loading="eager" fetchpriority="high" />
+          <div class="heritage-seal"><span>DESDE</span><strong>1992</strong><small>AVELLANEDA</small></div>
+        </div>
+        <div class="photo-caption"><span>Un mundo de posibilidades,</span><em>a la vuelta de casa.</em></div>
+      </div>
     </div>
   </section>
   <div class="quick-info" id="section-main"><div class="container quick-info-grid"><div><Icon name="pin" /><span>En el centro de Avellaneda<small>Av. Mitre 634 · Locales 7 y 10</small></span></div><div><Icon name="clock" /><span>Lunes a viernes, 10 a 18 h<small>Sábados, 10 a 13 h</small></span></div><a href={business.maps} target="_blank" rel="noopener noreferrer" data-contact="directions" data-location="quick-info"><span>Vení a conocernos<small>Cómo llegar al local</small></span><Icon name="diagonal" /></a></div></div>
