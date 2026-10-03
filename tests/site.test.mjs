@@ -75,10 +75,10 @@ test('Structured business information and contact destinations stay consistent',
     const data=JSON.parse(p.$('script[type="application/ld+json"]').text());
     const business=data['@graph'].find(item=>item['@type']==='Store');
     assert.equal(business.foundingDate,'1992');
-    assert.equal(business.telephone,'+541173981174');
+    assert.equal(business.telephone,'+5491128995506');
     assert.equal(business.url,origin+'/');
     assert.equal(business.address.addressLocality,'Avellaneda');
-    p.$('a[data-contact="phone"]').each((_,el)=>assert.equal(p.$(el).attr('href'),'tel:+541173981174'));
+    p.$('a[data-contact="phone"]').each((_,el)=>assert.equal(p.$(el).attr('href'),'tel:+5491128995506'));
     p.$('a[data-contact="whatsapp"][href]').each((_,el)=>{
       const link=new URL(p.$(el).attr('href'));
       assert.equal(link.origin,'https://wa.me');
