@@ -59,8 +59,8 @@
   .site-header { position:sticky; top:0; z-index:30; background:rgba(247,246,242,.97); border-bottom:1px solid #e6e5df; backdrop-filter:blur(14px); }
   .header-inner { min-height:91px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
   .brand { display:flex; align-items:center; gap:12px; flex-shrink:0; }
-  .brand-image { width:60px; height:53px; overflow:hidden; position:relative; }
-  .brand-image img { width:92px; max-width:none; position:absolute; left:-16px; top:-7px; }
+  .brand-image { width:80px; flex-shrink:0; }
+  .brand-image img { width:100%; height:auto; object-fit:contain; }
   .brand-type { display:block; font-size:1.18rem; line-height:1.1; font-weight:450; letter-spacing:-.06em; }
   .brand-type strong { font-weight:850; }
   .brand-type small { display:block; font-size:.48rem; letter-spacing:.14em; margin-top:8px; font-weight:650; }
@@ -166,23 +166,12 @@
   .hours dd { font-weight:650; }
   .contact-details>.button { margin-left:42px; }
   .location-panel { border:1px solid var(--line); background:var(--paper); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
-  .location-illustration { position:relative; height:285px; background:#e8eeea; overflow:hidden; border-bottom:1px solid #d7dfd9; }
-  .map-street { display:block; position:absolute; background:#faf9f4; box-shadow:0 0 0 1px #d4ddd4; }
-  .map-street--one { width:160%; height:65px; left:-20%; top:140px; transform:rotate(-28deg); }
-  .map-street--two { height:160%; width:30px; left:130px; top:-30%; transform:rotate(-28deg); }
-  .map-street--three { height:160%; width:30px; right:90px; top:-30%; transform:rotate(-28deg); }
-  .map-street-label { position:absolute; left:29px; top:204px; transform:rotate(-28deg); font-size:0.875rem; letter-spacing:.18em; color:#697971; }
-  .map-marker { position:absolute; top:83px; left:52%; display:grid; place-items:center; background:var(--ink); color:white; width:68px; height:68px; border-radius:50% 50% 50% 4px; transform:rotate(-45deg); box-shadow:0 8px 24px #243d5922; }
-  .map-marker svg { transform:rotate(45deg); }
   .location-caption { padding:29px 34px; }
   .location-caption .eyebrow { font-size:0.875rem; margin-bottom:9px; color:var(--teal); }
   .location-caption h3 { font-size:1.7rem; }
   .location-caption p { font-size:0.875rem; margin-top:7px; }
   .location-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; margin-top:15px; }
   .location-actions .text-link { font-size:0.875rem; }
-  .map-load { background:none; border:0; border-bottom:1px dotted #99a6a1; padding:8px 0; font-size:0.875rem; }
-  .map-load:hover { color:var(--teal); }
-  .map-ready .location-illustration { display:none; }
   .map-embed { order:-1; height:360px; }
   .map-embed iframe { border:0; width:100%; height:100%; }
   .site-footer { background:#1f354d; color:#e8edf1; padding-top:65px; }
@@ -236,6 +225,20 @@
 }
 
 @layer responsive {
+  .services-section .section-heading { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:23px; align-items:center; }
+  .contact-section .section-heading { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; align-items:center; }
+  .services-section .section-heading>p,.contact-section .section-heading>p { max-width:none; padding:0; margin:0; }
+  @media(max-width:1100px) {
+    .services-section .section-heading { gap:15px; }
+    .contact-section .section-heading { gap:55px; }
+  }
+  @media(max-width:900px) {
+    .services-section .section-heading { gap:20px; }
+    .contact-section .section-heading { grid-template-columns:1fr 1fr; gap:40px; }
+  }
+  @media(max-width:650px) {
+    .services-section .section-heading,.contact-section .section-heading { grid-template-columns:1fr; gap:20px; }
+  }
   @media(min-width:1500px) { .hero-grid { gap:80px; } }
   @media(max-width:1100px) {
     .container { width:calc(100% - 64px); }
@@ -300,7 +303,7 @@
     .announcement__inner { justify-content:center; min-height:29px; }
     .announcement__inner>a { display:none; }
     .brand-type { font-size:1.1rem; }
-    .brand-image { width:51px; }
+    .brand-image { width:64px; }
     .brand { gap:9px; }
     .header-inner { min-height:73px; }
     .site-navigation { flex-direction:column; align-items:stretch; gap:0; padding-top:0; }
@@ -369,7 +372,6 @@
     .contact-row address,.contact-row p,.hours { font-size:0.875rem; }
     .contact-row h3 { font-size:0.95rem; }
     .contact-row a { overflow-wrap:anywhere; }
-    .location-illustration { height:235px; }
     .map-embed { height:320px; }
     .location-caption { padding:25px; }
     .site-footer { padding-top:42px; }

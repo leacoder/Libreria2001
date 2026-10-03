@@ -83,26 +83,6 @@ if (gallery) {
   }
 }
 
-document.querySelectorAll<HTMLElement>('[data-map-panel]').forEach(panel=>{
-  const button=panel.querySelector<HTMLButtonElement>('[data-load-map]');
-  const container=panel.querySelector<HTMLElement>('[data-map-container]');
-  if(!button||!container) return;
-  button.hidden=false;
-  button.addEventListener('click',()=>{
-    const frame=document.createElement('iframe');
-    frame.title='Ubicación de Librería 2001 en Av. Mitre 634, Avellaneda';
-    frame.src='https://maps.google.com/maps?q=-34.661290%2C-58.366276&z=14&output=embed';
-    frame.loading='lazy';
-    frame.referrerPolicy='no-referrer-when-downgrade';
-    frame.allowFullscreen=true;
-    container.append(frame);
-    container.hidden=false;
-    panel.classList.add('map-ready');
-    button.disabled=true;
-    button.textContent='Mapa cargado';
-  },{once:true});
-});
-
 // Measurement is optional and never intercepts navigation or sends message text.
 document.addEventListener('click',event=>{
   if(!(event.target instanceof Element)) return;

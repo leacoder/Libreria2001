@@ -24,8 +24,6 @@ export const storeSchema = {
   '@id': `${business.site}/#negocio`,
   name: business.name,
   url: `${business.site}/`,
-  image: `${business.site}/img/Libreria%202001/LogoLibreriaBlueFlat.png`,
-  logo: `${business.site}/img/Libreria%202001/logolibreriaChico.png`,
   foundingDate: business.founded,
   telephone: business.phone,
   email: business.email,

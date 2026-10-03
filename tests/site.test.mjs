@@ -85,7 +85,13 @@ test('Structured business information and contact destinations stay consistent',
       assert.equal(link.pathname,'/5491128995506');
       assert.ok(link.searchParams.get('text'));
     });
-    assert.equal(p.$('iframe').length,0,'Maps must not load until requested');
+    const map=p.$('iframe');
+    assert.equal(map.length,p.$('#section-contact').length,p.route);
+    if(map.length) {
+      assert.equal(map.attr('loading'),'lazy');
+      assert.equal(new URL(map.attr('src')).searchParams.get('z'),'14');
+      assert.ok(map.attr('title')?.includes('Avellaneda'));
+    }
     assert.equal(p.$('[onclick]').length,0,'No inline Analytics click handlers');
   }
 });

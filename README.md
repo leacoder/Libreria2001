@@ -1,6 +1,6 @@
 # Librería 2001 · Avellaneda, desde 1992
 
-Sitio estático con Astro, orientado a consultas por WhatsApp y visitas al local. Conserva el logo, el azul de la marca y las imágenes de productos del sitio anterior.
+Sitio estático con Astro, orientado a consultas por WhatsApp y visitas al local. Usa el nuevo logo aportado por el propietario y conserva el azul de la marca y las imágenes de productos del sitio anterior.
 
 ## Ver la web en tu computadora
 
@@ -29,7 +29,7 @@ npm run preview
 - Catálogo con los 18 productos anteriores, filtros accesibles y consulta individual por WhatsApp. Las imágenes son orientativas, no inventario en tiempo real.
 - Menú móvil que cierra al elegir una sección; galería estable con CSS Grid; ampliación con teclado, Escape y recuperación del foco.
 - Eliminación de jQuery, Bootstrap y plugins antiguos. WhatsApp funciona como enlace HTML aunque no haya Analytics o JavaScript.
-- Imágenes WebP con tamaños adaptables y dimensiones reservadas. Mapa de Google cargado únicamente a pedido.
+- Imágenes WebP con tamaños adaptables y dimensiones reservadas. Mapa real de Google con carga diferida y una vista amplia de la zona.
 - Títulos y descripciones propios, canonical sin www, sitemap, datos estructurados de negocio y servicios, y página 404.
 - Se mantienen la raíz, los anclajes históricos, las URLs originales de imágenes, `CNAME` y el archivo de verificación de Google.
 
@@ -45,7 +45,7 @@ La auditoría original está en [docs/auditoria-2026-10-02.md](docs/auditoria-20
 | `src/pages/index.astro` | Portada e historia |
 | `src/components/ContactSection.astro` | Horarios y contacto visibles; sincronizar con `business.ts` al cambiarlos |
 | `src/styles/global.css` | Identidad visual y diseño adaptable |
-| `src/assets/papeleria-editorial.png` | Imagen editorial generada para la portada |
+| `src/assets/papeleria-editorial-marca.png` | Imagen editorial generada para la portada |
 | `public/img/` | Imágenes originales, conservadas en sus URLs |
 
 ## Google Analytics 4
@@ -95,3 +95,5 @@ Ejecutar `npm ci` y `npm run verify`, y subir **el contenido de `dist/`**, inclu
 - Comparar consultas, clics, impresiones y acciones de contacto después de un período suficiente y considerar la estacionalidad escolar. La exportación recibida y su análisis privado permanecen fuera de Git, dentro de `.local/`.
 
 Para revertir una publicación, volver a desplegar la versión anterior mediante el mecanismo de hosting correspondiente. La versión HTML original se conserva en el historial Git, commit `8abbb50`; no ejecutarla con el workflow Astro porque no tiene `package.json`.
+
+Los ajustes de logo, portada y alineación están documentados en [docs/ajustes-marca-2026-10-03.md](docs/ajustes-marca-2026-10-03.md).
