@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import ContactLink from '../../components/ContactLink.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import Icon from '../../components/Icon.astro';
+import { services,servicePath } from '../../data/services';
+import { business } from '../../data/business';
+export const getStaticPaths = (() => services.map(service => ({params:{slug:service.slug},props:{service}}))) satisfies GetStaticPaths;
+const {service}=Astro.props;
+const url = `${business.site}${servicePath(service.slug)}`;
+const schema = [
+  {'@type':'Service','@id':`${url}#servicio`,name:service.title,description:service.intro,url,provider:{'@id':`${business.site}/#negocio`},areaServed:{'@type':'City',name:'Avellaneda'}},
+  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Inicio',item:`${business.site}/`},{'@type':'ListItem',position:2,name:service.name,item:url}]},
+];
+---
+<Base title={`${service.title} | Librería 2001`} description={service.description} schema={schema}>
+  <section class="service-hero"><div class="container"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{service.name}</span></nav><div class="service-hero-grid"><div><span class="eyebrow">{service.eyebrow}</span><h1>{service.title}</h1><p class="service-intro">{service.intro}</p><ContactLink message={`Hola, quisiera consultar por ${service.name.toLowerCase()} en Librería 2001.`} location={`service-${service.slug}`} /><div class="hero-note"><Icon name="pin" size={18} /><span>Av. Mitre 634 · Locales 7 y 10</span></div></div><aside class="service-summary"><span class="service-icon"><Icon name={service.icon} size={42} /></span><h2>{service.short}</h2><ul>{service.items.map(item=><li><Icon name="check" size={18} /><span>{item}</span></li>)}</ul><div class="service-summary-foot">Atención personalizada, desde 1992.</div></aside></div></div></section>
+  <section class="section service-process" aria-labelledby="process-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">SIMPLE Y PERSONAL</span><h2 id="process-title">Contanos qué necesitás.<br /><em>Te ayudamos a seguir.</em></h2></div></div><ol class="process-grid">{service.steps.map(([title,text],i)=><li><span class="step-number">0{i+1}</span><h3>{title}</h3><p>{text}</p></li>)}</ol></div></section>
+  <section class="section faq-section" aria-labelledby="faq-title"><div class="container faq-grid"><div><span class="eyebrow">ANTES DE VENIR</span><h2 id="faq-title">Algunas respuestas<br /><em>para tu consulta.</em></h2><p>Si te queda una duda, escribinos.<br />Cada trabajo y cada proyecto son distintos.</p></div><div class="faq-list">{service.faqs.map(([question,answer])=><details><summary>{question}<Icon name="plus" size={20} /></summary><p>{answer}</p></details>)}</div></div></section>
+  <ContactSection />
+  <section class="related-section"><div class="container"><span class="eyebrow">TAMBIÉN EN LIBRERÍA 2001</span><div class="related-links">{services.filter(s=>s.slug!==service.slug).map(s=><a href={servicePath(s.slug)}>{s.name}<Icon name="diagonal" size={20} /></a>)}</div></div></section>
+</Base>
