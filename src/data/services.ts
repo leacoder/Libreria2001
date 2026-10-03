@@ -2,6 +2,7 @@ export const services = [
   {
     slug: 'impresiones-fotocopias-avellaneda',
     name: 'Impresiones y fotocopias',
+    linkLabel: 'Ver opciones de impresión',
     title: 'Impresiones y fotocopias en Avellaneda',
     short: 'Tus documentos, en papel.',
     description: 'Impresiones a color y fotocopias en Avellaneda. Consultá tu trabajo por WhatsApp o acercate a Av. Mitre 634, locales 7 y 10. Librería 2001, desde 1992.',
@@ -24,6 +25,7 @@ export const services = [
   {
     slug: 'copiado-libros-contables-avellaneda',
     name: 'Libros contables',
+    linkLabel: 'Cómo es el copiado',
     title: 'Copiado de libros contables en Avellaneda',
     short: 'Tus registros, en buenas manos.',
     description: 'Copiado directo de libros contables en Avellaneda. Consultá requisitos y disponibilidad en Librería 2001, Av. Mitre 634, locales 7 y 10. Desde 1992.',
@@ -46,6 +48,7 @@ export const services = [
   {
     slug: 'libreria-artistica-avellaneda',
     name: 'Librería artística',
+    linkLabel: 'Explorar materiales',
     title: 'Librería artística en Avellaneda',
     short: 'Materiales para imaginar más.',
     description: 'Pinceles, óleos, acrílicos y materiales de artística en Avellaneda. Consultá disponibilidad en Librería 2001, Av. Mitre 634. Atención personalizada desde 1992.',
@@ -68,6 +71,7 @@ export const services = [
   {
     slug: 'libreria-comercial-escolar-avellaneda',
     name: 'Comercial y escolar',
+    linkLabel: 'Encontrar tus útiles',
     title: 'Librería comercial y escolar en Avellaneda',
     short: 'Para estudiar y trabajar mejor.',
     description: 'Artículos de oficina y librería escolar en Avellaneda: papel, carpetas, agendas, biblioratos y útiles. Librería 2001, Av. Mitre 634, desde 1992.',
