@@ -2,6 +2,8 @@
 
 Se incorporó el logo aportado por el propietario, sin redibujarlo, en el encabezado, los iconos del navegador y el marcado del negocio. Original guardado en `src/assets/logo-libreria-2001.png`; Astro genera las versiones optimizadas.
 
+Se reemplazó ese archivo por la versión azul mate, menos brillante, entregada posteriormente por el propietario. Se conserva el PNG exacto, incluida su transparencia. La compilación regenera las variantes WebP del encabezado, favicon, icono táctil y logo de los datos estructurados. Verificación del reemplazo: `npm run verify` aprobado (sin diagnósticos y seis pruebas correctas) y logo cargado sin desbordamiento horizontal en vistas móvil y escritorio.
+
 Los textos introductorios de contacto y servicios comparten las columnas del contenido inferior. En móvil se apilan. Se sustituyó el plano decorativo por el mapa real con zoom 14, carga diferida nativa y enlace de indicaciones siempre disponible, también sin JavaScript. El número de WhatsApp continúa visible únicamente en Contacto.
 
 ## Imagen de portada
