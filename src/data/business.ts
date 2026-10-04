@@ -3,6 +3,7 @@ export const business = {
   site: 'https://libreria2001.com.ar',
   founded: '1992',
   address: 'Av. Mitre 634',
+  gallery: 'Galería French',
   premises: 'Locales 7 y 10',
   city: 'Avellaneda, Buenos Aires',
   phone: '+5491128995506',
@@ -29,7 +30,7 @@ export const storeSchema = {
   email: business.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: `${business.address}, locales 7 y 10`,
+    streetAddress: `${business.address}, ${business.gallery}, ${business.premises.toLowerCase()}`,
     addressLocality: 'Avellaneda',
     addressRegion: 'Buenos Aires',
     addressCountry: 'AR',

@@ -4,7 +4,7 @@ Se incorporó el logo aportado por el propietario, sin redibujarlo, en el encabe
 
 Se reemplazó ese archivo por la versión azul mate, menos brillante, entregada posteriormente por el propietario. Se conserva el PNG exacto, incluida su transparencia. La compilación regenera las variantes WebP del encabezado, favicon, icono táctil y logo de los datos estructurados. Verificación del reemplazo: `npm run verify` aprobado (sin diagnósticos y seis pruebas correctas) y logo cargado sin desbordamiento horizontal en vistas móvil y escritorio.
 
-Los textos introductorios de contacto y servicios comparten las columnas del contenido inferior. En móvil se apilan. Se sustituyó el plano decorativo por el mapa real con zoom 14, carga diferida nativa y enlace de indicaciones siempre disponible, también sin JavaScript. El número de WhatsApp continúa visible únicamente en Contacto.
+Los textos introductorios de contacto y servicios comparten las columnas del contenido inferior. En móvil se apilan. Se sustituyó el plano decorativo por el mapa real, con carga diferida nativa y enlace de indicaciones siempre disponible, también sin JavaScript. El 4 de octubre se ajustó el zoom inicial de 14 a 16, siguiendo la captura del propietario, para mostrar las calles cercanas y la Plaza Adolfo Alsina. Este valor se aplica a la portada y a las páginas de servicios. El número de WhatsApp continúa visible únicamente en Contacto.
 
 ## Dirección visual azul mate y marfil
 
