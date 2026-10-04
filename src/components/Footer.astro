@@ -7,9 +7,26 @@ import Icon from './Icon.astro';
   <div class="container footer-grid">
     <div class="footer-brand"><a href="/">Librería <strong>2001</strong></a><p>Lo de todos los días.<br />La atención de siempre.</p><span>Avellaneda, desde 1992.</span></div>
     <div><h2>Encontrá lo que necesitás</h2><ul>{services.map(s => <li><a href={servicePath(s.slug)}>{s.name}</a></li>)}</ul></div>
-    <div><h2>Estamos cerca</h2><address>{business.address}<br />{business.premises}<br />{business.city}</address><a class="footer-directions" href={business.maps} target="_blank" rel="noopener noreferrer" data-contact="directions" data-location="footer">Cómo llegar <Icon name="diagonal" size={15} /></a></div>
+    <div><h2>Estamos cerca</h2><address>{business.address}<br />{business.gallery}<br />{business.premises}<br />{business.city}</address><a class="footer-directions" href={business.maps} target="_blank" rel="noopener noreferrer" data-contact="directions" data-location="footer">Cómo llegar <Icon name="diagonal" size={15} /></a></div>
     <div><h2>Seguimos en contacto</h2><ul><li><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location="footer">WhatsApp</a></li><li><a href={business.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href={business.facebook} target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href={`mailto:${business.email}`} data-contact="email" data-location="footer">Escribinos por mail</a></li></ul></div>
   </div>
-  <div class="container footer-bottom"><span>© {new Date().getFullYear()} Librería 2001</span><span>Papelería, artística y librería comercial.</span><a href="/#header">Volver arriba ↑</a></div>
+  <div class="container footer-bottom">
+    <span>© {new Date().getFullYear()} Librería 2001</span>
+    <span>Papelería, artística y librería comercial.</span>
+    <a href="/#header">Volver arriba ↑</a>
+  </div>
+  <div class="footer-design">
+    <div class="container footer-design-inner">
+      <a class="footer-design-brand" href="https://lgdesign.com.ar/" target="_blank" rel="noopener noreferrer">
+        <span>Página diseñada por</span>
+        <span class="footer-design-logo"><img src="/img/logo-lg-design.svg" width="240" height="72" alt="LG Design" loading="lazy" /><Icon name="diagonal" size={23} /></span>
+      </a>
+      <div class="footer-design-copy">
+        <p>¿Una web para tu próximo proyecto?</p>
+        <span>Diseño de páginas y apps web.</span>
+      </div>
+      <a class="button button--primary" href="https://lgdesign.com.ar/" target="_blank" rel="noopener noreferrer">Conocé LG Design <Icon name="diagonal" size={18} /></a>
+    </div>
+  </div>
 </footer>
 <a class="floating-contact" href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label="Consultar a Librería 2001 por WhatsApp" data-contact="whatsapp" data-location="floating"><Icon name="chat" size={24} /><span>¿Te ayudamos?</span></a>

@@ -89,7 +89,7 @@ test('Structured business information and contact destinations stay consistent',
     assert.equal(map.length,p.$('#section-contact').length,p.route);
     if(map.length) {
       assert.equal(map.attr('loading'),'lazy');
-      assert.equal(new URL(map.attr('src')).searchParams.get('z'),'14');
+      assert.equal(new URL(map.attr('src')).searchParams.get('z'),'16');
       assert.ok(map.attr('title')?.includes('Avellaneda'));
     }
     assert.equal(p.$('[onclick]').length,0,'No inline Analytics click handlers');
