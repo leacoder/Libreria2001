@@ -73,7 +73,6 @@
   .hero-grid { display:grid; grid-template-columns:1fr 1.02fr; gap:56px; align-items:center; }
   .hero-copy { padding:20px 0; }
   .hero-copy .eyebrow { display:flex; align-items:center; gap:10px; font-size:0.875rem; margin-bottom:28px; color:var(--blue); }
-  .little-line { width:25px; height:1px; background:currentColor; }
   .hero h1 { font-weight:550; line-height:1.08; }
   .hero h1 em { color:var(--blue); }
   .hero-copy>p { margin-top:32px; font-size:0.98rem; line-height:1.8; }
