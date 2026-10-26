@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-libreria-2001.png';
+import controller from '../scripts/brand-splash.js?raw';
+---
+<div class="brand-splash" data-brand-splash data-session-key="libreria-brand-intro" data-duration="2200" hidden aria-hidden="true" inert>
+  <div class="splash-sheet">
+    <div class="splash-lockup">
+      <Image class="splash-logo" src={logo} width={480} format="webp" alt="" loading="eager" />
+      <p class="splash-tagline">Desde 1992.</p>
+      <p class="splash-signature">AVELLANEDA</p>
+      <div class="splash-rule"></div>
+      <p class="splash-categories">PAPELERÍA · ARTÍSTICA · ESCOLAR</p>
+    </div>
+  </div>
+</div>
+<script is:inline set:html={controller} />
+<style>
+  .brand-splash{position:fixed;inset:0;z-index:1000;pointer-events:none;--splash-ease:cubic-bezier(.16,1,.3,1)}
+  .brand-splash[hidden]{display:none!important}
+  .brand-splash:not([hidden]){animation:splash-expire 1ms step-end 2700ms forwards}
+  .splash-sheet{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;background:#f7f4ed;color:#243d59;box-shadow:0 10px 28px #243d5912;animation:splash-exit 600ms cubic-bezier(.65,0,.35,1) 1600ms both}
+  .splash-lockup{max-width:100%;padding:24px 16px;text-align:center;font-family:var(--sans)}
+  .splash-logo{width:240px;max-width:64vw;height:auto;display:block;margin:auto;animation:splash-logo-in 650ms var(--splash-ease) 60ms both}
+  .splash-tagline{font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.3;font-weight:450;margin:23px 0 0;letter-spacing:-.025em;color:#243d59;animation:splash-rise 500ms var(--splash-ease) 300ms both}
+  .splash-signature{margin:12px 0 0;font-size:10px;line-height:1.5;letter-spacing:.15em;font-weight:650;color:#526d88;animation:splash-rise 420ms var(--splash-ease) 430ms both}
+  .splash-rule{width:30px;height:1px;background:#a0b0bc;margin:20px auto 0;animation:splash-rule-in 500ms var(--splash-ease) 480ms both}
+  .splash-categories{margin:20px 0 0;font-size:11px;line-height:1.5;font-weight:700;letter-spacing:.11em;color:#243d59;animation:splash-rise 500ms var(--splash-ease) 560ms both}
+  @keyframes splash-logo-in{from{opacity:0;transform:translateY(12px) scale(.97);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:translateY(0) scale(1);clip-path:inset(0)}}
+  @keyframes splash-rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes splash-rule-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes splash-exit{to{transform:translateY(-103%)}}
+  @keyframes splash-expire{to{visibility:hidden}}
+  @media(max-width:390px){.splash-logo{width:210px}.splash-categories{font-size:10px}}
+  @media(max-height:380px){.splash-logo{width:140px}.splash-tagline{margin-top:14px}.splash-rule,.splash-categories{margin-top:12px}}
+  @media(prefers-reduced-motion:reduce){.brand-splash{display:none!important}}
+  @media print{.brand-splash{display:none!important}}
+</style>

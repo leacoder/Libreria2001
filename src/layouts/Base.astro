@@ -3,6 +3,7 @@ import sansFont from '@fontsource-variable/manrope/files/manrope-latin-wght-norm
 import serifFont from '@fontsource-variable/newsreader/files/newsreader-latin-wght-italic.woff2?url';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import BrandSplash from '../components/BrandSplash.astro';
 import Footer from '../components/Footer.astro';
 import { business, storeSchema } from '../data/business';
 import { getImage } from 'astro:assets';
@@ -13,6 +14,7 @@ const {title,description,schema=[],noindex=false}=Astro.props;
 const canonical = new URL(noindex ? '/404.html' : Astro.url.pathname, business.site).href;
 const socialImage = await getImage({ src:editorial,width:1200,height:630,fit:'cover',format:'jpg',quality:80 });
 const logoImage = await getImage({src:logo,width:300,format:'png'});
+const splashLogo = await getImage({src:logo,width:480,format:'webp'});
 const favicon = await getImage({src:logo,width:64,format:'png'});
 const touchIcon = await getImage({src:logo,width:180,format:'png'});
 const jsonLd = { '@context':'https://schema.org','@graph':[
@@ -31,6 +33,7 @@ const enableAnalytics = import.meta.env.PROD && analyticsId && !noindex;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {Astro.url.pathname === '/' && !noindex && <link rel="preload" as="image" href={splashLogo.src} />}
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -67,6 +70,7 @@ const enableAnalytics = import.meta.env.PROD && analyticsId && !noindex;
     </script>}
   </head>
   <body id="header">
+    {Astro.url.pathname === '/' && !noindex && <BrandSplash />}
     <a class="skip-link" href="#main">Ir al contenido</a>
     <Header />
     <main id="main"><slot /></main>
